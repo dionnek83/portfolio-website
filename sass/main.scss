@@ -1,0 +1,570 @@
+
+//  =================== RESETS =================
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   }
+//  =================== VARIABLES =================
+$main-color: rgba(192, 18, 70, 1);
+$heading-font: 'Luckiest Guy', cursive;
+$body-font:  'Poppins', sans-serif; 
+
+
+//  =================== MIXINS =================
+@mixin headings($font-size, $alignment) {
+    text-align: $alignment;
+    font-size: $font-size;
+    font-family: $heading-font;
+}
+
+// COLOR SCHEME
+@mixin colors($pink-area:true) {
+    @if $pink-area{
+        background-color: $main-color;
+       color: rgb(245, 235, 235);
+    
+      
+    }
+    @else{
+        background-color: #fff;
+        color: #1f1f1f;
+    }
+}
+@mixin button($pink-area:true){
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    // font-size: 20px;
+    font-size:1.2rem;
+    text-decoration: none;
+
+    @if $pink-area{
+        background-color: #fff;
+         a{
+            text-decoration: none;  
+            // color: #000; 
+            color: #1f1f1f;
+        }
+    }
+    @else{
+      background-color: #1f1f1f;
+       a{
+        color: #fff;
+        text-decoration: none; 
+       }
+    }
+}
+
+
+//  =================== NAVIGATION =================
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+  }
+
+  .navbar-area{
+    background: $main-color;
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
+    // z-index: 1;
+    // border: 1px solid black;
+  }
+
+  .site-navbar {
+    display: flex;
+    justify-content: space-between;
+    // padding: 10px 40px;
+    padding: 10px 70px;
+    align-items: center;
+    // border: 1px solid black;
+  }
+  .site-logo {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-family: $heading-font;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  .site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    
+
+   
+  }
+  
+  .site-navbar ul li a {
+    color: #fff;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    // text-transform: uppercase;
+    font-family: $body-font;
+    font-size: 20px;
+    transition: 0.3s ease;
+     
+  
+  }
+  .site-navbar ul li a:hover {
+    color: #000;
+  
+  }
+  .active{
+    // border: 1px solid whitesmoke;
+    // border-radius: 10px;
+    border-bottom: 1px solid black;
+  }
+
+//   HAMBURGER MENU
+.nav-toggler {
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+  }
+  .nav-toggler span, 
+  .nav-toggler span:before, 
+  .nav-toggler span:after {
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: .3s;
+  }
+  .nav-toggler span:before {
+    content: '';
+    transform: translateY(-9px);
+  }
+  .nav-toggler span:after {
+    content: '';
+    transform: translateY(6px);
+  }
+  .nav-toggler.toggler-open span {
+    background-color: transparent;
+  }
+  .nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+ 
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+    .container {
+      max-width: 720px;
+    }
+    .nav-toggler{
+      display: block;
+    }
+    .site-logo{
+        padding: 0;
+        padding: 10px 0px 0px;
+    }
+    .site-navbar {
+      min-height: 60px;
+      padding: 0px 15px;
+    }
+    .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      left: 0;
+      top: 60px;
+      flex-direction: column;
+      align-items: center;
+    background-color: $main-color;
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+    }
+    .site-navbar ul li {
+      width: 100%;
+      text-align: center;
+    }
+    .site-navbar ul li a {
+    padding: 50px;
+   
+    }
+    .site-navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+    }
+  }
+
+//  =================== BASE STYLES  ================= 
+
+body {
+    font-family: $body-font;
+}
+.sub-heading{
+    @include headings(3rem,center)
+}
+
+
+//  =================== INTRODUCTION SECTION =================
+#home{
+    @include colors($pink-area:true);
+    // padding: 100px 0px 70px;
+    padding: 85px 0 70px;
+    text-align: center;
+    margin-bottom: -5px;
+//  border: 1px solid black;
+
+          
+   .heading{
+    @include headings(60px,center)
+   }
+   p{
+       font-size: 25px;
+       line-height: 2.0;
+       padding-bottom: 10px;
+   }
+   button{
+    @include button($pink-area:true);
+   }
+   button:hover{
+        background-color: #000;
+        a{
+            color: #fff;
+           }
+    }
+}
+
+.wave{
+  width: 100%;
+
+}
+//  =================== ABOUT SECTION =================
+// .about-me {
+//   @include colors($pink-area:false);
+//     text-align: center;
+//     // padding: 100px 0 60px;
+//     padding-bottom: 60px;
+   
+
+//     img{
+//         border-radius: 50%;
+//         width: 20%;
+//         margin-top: 15px;
+      
+//     }
+
+//     button{
+//         @include button($pink-area:false);
+//        }
+//        button:hover{
+//         background-color: $main-color;
+//         a{
+//             color: #fff;
+//            }
+       
+//     }
+
+//     .paragraph{
+//       width: 80%;
+//       margin: 15px auto; 
+//     }
+//   hr{
+//     border-style: none;
+//     border-bottom: dotted rgba(196, 196, 196, 1);
+// border-width: 0.8rem;
+// width: 5rem;
+//     margin: 50px auto;
+
+// }
+// }
+
+
+// @media screen and (max-width: 767px) {
+
+// .about-me  {
+// img{
+//     border-radius: 50%;
+//     width: 30%;
+//     margin-top: 15px;
+// }
+// .paragraph{
+//   width: 70%;
+// }
+// }
+// }
+
+.about-me {
+    @include colors($pink-area:false);
+     
+}
+.con{
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.profile-image{
+  width: 230px;
+  margin-right: 60px;
+ 
+  
+
+  img{
+    width: 100%;
+    border-radius: 50%;
+  
+  }
+}
+.about{
+  width: 600px;
+  // border: 1px solid black;
+  padding: 40px 20px 0 ;
+ 
+  
+}
+.btn{
+          @include button($pink-area:false);
+          float: right;
+         }
+         .btn:hover{
+          background-color: $main-color;
+          a{
+              color: #fff;
+             }
+         
+      }
+
+
+      @media screen and (max-width: 767px) {
+        .profile-image{
+          margin: 0;
+        }
+        .about{
+          padding: 0 20px;
+        }
+        .btn{
+          margin-top: 20px;
+          position: absolute;
+          left: 30%;
+          margin-bottom: 20px;
+          
+        }
+        .contacts {
+       
+        }
+      }
+
+
+
+
+
+
+
+
+
+//  =================== SERVICES SECTION =================
+// .services-container{
+  .skills-container{
+  @include colors($pink-area:false);
+  display: flex;
+  justify-content: space-around;
+  // flex-wrap: wrap;
+  text-align: center;
+  // padding-top: 80px;
+  padding-top: 40px;
+  padding: 40px 20px;
+  // flex-direction: row;
+  flex-flow: row wrap;
+  
+}
+// .frontend , .backend{
+//   display: flex;
+//   // flex-direction: row;
+//   // margin: 0 auto;
+//   border: 1px solid black;
+//   // flex-wrap: wrap;
+//   flex-flow: row wrap;
+// }
+.design{
+  flex-basis: 20%;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  // border: 1px solid black;
+   
+  
+}
+.design img{
+  width: 50px;
+  height: 50px;
+}
+
+.wave-1{
+  transform: rotate(180deg);
+}
+//  =================== PORTFOLIO SECTION =================
+.portfolio{
+@include colors($pink-area:true);
+padding: 50px 50px;
+// padding-top: 50px;
+margin: -10px 0px -5px;
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 70px;
+
+.project {
+  // flex-basis: 400px;
+  width: 400px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  // min-width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color:black;
+
+  img{
+    width: 100%;
+    
+  }
+  .project img {
+    border-radius: 0.5rem;
+  }
+
+  project:hover .portfolio__link {
+    bottom: 0;
+  }
+  .portfolio__link {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255,255, 0.3);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+
+  }
+  .project:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .portfolio__link-name {
+ color: black;
+  }
+  
+}
+ 
+}
+}
+//  =================== CONTACT SECTION =================
+.contact-me {
+  @include colors($pink-area:false);
+  // padding: 100px 0px;
+  padding:0;
+
+  p{
+    text-align: center;
+    margin: 10px 20px 0px ;
+  }
+
+  p, h4{
+    font-size: 1.4rem;
+  }
+
+  .contacts{
+    // display: flex;
+    // flex-wrap: wrap;
+    // text-align: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-top: 30px;
+   
+  
+    form {
+      width: 50%;
+      display:  flex;
+      margin: 0 auto;
+      flex-direction: column;
+
+   
+   
+
+      button{
+    padding: 10px 50px;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+      }
+     button:hover{
+       background-color: $main-color;
+      
+     }
+
+     label{
+       margin: 10px 0;
+     }
+     input{
+       padding: 5px 0;
+      //  margin: 20px 0;
+     }
+   
+    }
+  
+  }
+  .email,.phone{
+    flex-basis: 300px;
+    padding-bottom: 30px;
+    
+   
+  
+  }
+}
+//  =================== FOOTER SECTION =================
+.last{
+  @include colors($pink-area:true);
+  padding: 50px 0px;
+  text-align: center;
+  margin-top: -10px;
+  
+
+  .social-media a{
+    padding-left: 5px;
+    color: #1f1f1f;
+  }
+  .social-media a:hover{
+    color: #fff;
+    transition: 0.5s ease-in;
+  }
+}
+
+/*==============================THINGS THAT STILL NEED TO BE DONE ==========================*/
+/*====================
+++Link to cv 
+++ add links to view website/webapp live and to view code to portfolio section
+++ add some slide in animation 
+++ change services section to skills section 
+++ add more description to about me section
+++ check if the font size is okay 
+++ put it on github pages to view what it looks like on phone 
+++ link to social media sites 
+++ no hover effect on active link */

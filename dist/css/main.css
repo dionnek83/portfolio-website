@@ -1,0 +1,490 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar-area {
+  background: #c01246;
+}
+
+.site-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-logo {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Luckiest Guy", cursive;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.site-navbar ul li a:hover {
+  color: #000;
+}
+
+.active {
+  border-bottom: 1px solid black;
+}
+
+.nav-toggler {
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-toggler span:before {
+  content: '';
+  -webkit-transform: translateY(-9px);
+          transform: translateY(-9px);
+}
+
+.nav-toggler span:after {
+  content: '';
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+
+.nav-toggler.toggler-open span:before {
+  -webkit-transform: translateY(0px) rotate(45deg);
+          transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open span:after {
+  -webkit-transform: translateY(-3px) rotate(-45deg);
+          transform: translateY(-3px) rotate(-45deg);
+}
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+  .nav-toggler {
+    display: block;
+  }
+  .site-logo {
+    padding: 0;
+    padding: 10px 0px 0px;
+  }
+  .site-navbar {
+    min-height: 60px;
+    padding: 0px 15px;
+  }
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #c01246;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .site-navbar ul li a {
+    padding: 50px;
+  }
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Luckiest Guy", cursive;
+}
+
+#home {
+  background-color: #c01246;
+  color: #f5ebeb;
+  padding: 85px 0 70px;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+#home .heading {
+  text-align: center;
+  font-size: 60px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+#home p {
+  font-size: 25px;
+  line-height: 2.0;
+  padding-bottom: 10px;
+}
+
+#home button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+#home button a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+#home button:hover {
+  background-color: #000;
+}
+
+#home button:hover a {
+  color: #fff;
+}
+
+.wave {
+  width: 100%;
+}
+
+.about-me {
+  background-color: #fff;
+  color: #1f1f1f;
+}
+
+.con {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profile-image {
+  width: 230px;
+  margin-right: 60px;
+}
+
+.profile-image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.about {
+  width: 600px;
+  padding: 40px 20px 0;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: #1f1f1f;
+  float: right;
+}
+
+.btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #c01246;
+}
+
+.btn:hover a {
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .profile-image {
+    margin: 0;
+  }
+  .about {
+    padding: 0 20px;
+  }
+  .btn {
+    margin-top: 20px;
+    position: absolute;
+    left: 30%;
+    margin-bottom: 20px;
+  }
+}
+
+.skills-container {
+  background-color: #fff;
+  color: #1f1f1f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  padding-top: 40px;
+  padding: 40px 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.design {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin-bottom: 30px;
+  margin-right: 15px;
+}
+
+.design img {
+  width: 50px;
+  height: 50px;
+}
+
+.wave-1 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.portfolio {
+  background-color: #c01246;
+  color: #f5ebeb;
+  padding: 50px 50px;
+  margin: -10px 0px -5px;
+}
+
+.portfolio .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 70px;
+}
+
+.portfolio .projects .project {
+  width: 400px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: black;
+}
+
+.portfolio .projects .project img {
+  width: 100%;
+}
+
+.portfolio .projects .project .project img {
+  border-radius: 0.5rem;
+}
+
+.portfolio .projects .project project:hover .portfolio__link {
+  bottom: 0;
+}
+
+.portfolio .projects .project .portfolio__link {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.portfolio .projects .project .project:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.portfolio .projects .project .portfolio__link-name {
+  color: black;
+}
+
+.contact-me {
+  background-color: #fff;
+  color: #1f1f1f;
+  padding: 0;
+}
+
+.contact-me p {
+  text-align: center;
+  margin: 10px 20px 0px;
+}
+
+.contact-me p, .contact-me h4 {
+  font-size: 1.4rem;
+}
+
+.contact-me .contacts {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+.contact-me .contacts form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-me .contacts form button {
+  padding: 10px 50px;
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+}
+
+.contact-me .contacts form button:hover {
+  background-color: #c01246;
+}
+
+.contact-me .contacts form label {
+  margin: 10px 0;
+}
+
+.contact-me .contacts form input {
+  padding: 5px 0;
+}
+
+.contact-me .email, .contact-me .phone {
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  padding-bottom: 30px;
+}
+
+.last {
+  background-color: #c01246;
+  color: #f5ebeb;
+  padding: 50px 0px;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.last .social-media a {
+  padding-left: 5px;
+  color: #1f1f1f;
+}
+
+.last .social-media a:hover {
+  color: #fff;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+/*==============================THINGS THAT STILL NEED TO BE DONE ==========================*/
+/*====================
+++Link to cv 
+++ add links to view website/webapp live and to view code to portfolio section
+++ add some slide in animation 
+++ change services section to skills section 
+++ add more description to about me section
+++ check if the font size is okay 
+++ put it on github pages to view what it looks like on phone 
+++ link to social media sites 
+++ no hover effect on active link */
+/*# sourceMappingURL=main.css.map */
