@@ -630,6 +630,12 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  #home p {
+    font-size: 20px;
+  }
+  .project {
+    margin: 0 20px;
+  }
   .project h2 {
     font-family: "Luckiest Guy", cursive;
     font-size: 20px;

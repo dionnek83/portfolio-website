@@ -372,7 +372,6 @@ border-radius: 3px;
 .image{
    width: 50%;
    margin-right: 20px;
-  //  height: auto;
   height: 60%;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
    border: 3px solid black;
@@ -600,6 +599,14 @@ font-size: 23px;
  }
 
   @media screen and (max-width: 600px) {
+    #home p{
+    font-size:20px
+    }
+.project {
+ 
+  margin: 0 20px;
+}
+
 .project h2 {
   font-family: $heading-font;
   font-size: 20px;
