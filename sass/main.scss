@@ -1,475 +1,428 @@
-
 //  =================== RESETS =================
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-   }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 //  =================== VARIABLES =================
 $main-color: rgba(192, 18, 70, 1);
-$heading-font: 'Luckiest Guy', cursive;
-$body-font:  'Poppins', sans-serif; 
-
+$heading-font: "Luckiest Guy", cursive;
+$body-font: "Poppins", sans-serif;
 
 //  =================== MIXINS =================
 @mixin headings($font-size, $alignment) {
-    text-align: $alignment;
-    font-size: $font-size;
-    font-family: $heading-font;
+  text-align: $alignment;
+  font-size: $font-size;
+  font-family: $heading-font;
 }
 
 // COLOR SCHEME
-@mixin colors($pink-area:true) {
-    @if $pink-area{
-        background-color: $main-color;
-       color: rgb(245, 235, 235);
-    
-      
-    }
-    @else{
-        background-color: #fff;
-        color: #1f1f1f;
-    }
+@mixin colors($pink-area: true) {
+  @if $pink-area {
+    background-color: $main-color;
+    color: rgb(245, 235, 235);
+  } @else {
+    background-color: #fff;
+    color: #1f1f1f;
+  }
 }
-@mixin button($pink-area:true){
-    padding: 10px 25px;
-    border-radius: 10px;
-    border: none;
-    font-size:1.2rem;
-    text-decoration: none;
+@mixin button($pink-area: true) {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  text-decoration: none;
 
-    @if $pink-area{
-        background-color: #fff;
-         a{
-            text-decoration: none;  
-            color: #1f1f1f;
-        }
+  @if $pink-area {
+    background-color: #fff;
+    a {
+      text-decoration: none;
+      color: #1f1f1f;
     }
-    @else{
-      background-color: #1f1f1f;
-       a{
-        color: #fff;
-        text-decoration: none; 
-       }
+  } @else {
+    background-color: #1f1f1f;
+    a {
+      color: #fff;
+      text-decoration: none;
     }
+  }
 }
-
 
 //  =================== NAVIGATION =================
 
 .container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 15px;
-    
-  }
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
-  .navbar-area{
-    background: $main-color;
-  }
+.navbar-area {
+  background: $main-color;
+}
 
-  .site-navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 70px;
-    align-items: center;
-  }
-  .site-logo {
-    font-size: 35px;
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-    font-family: $heading-font;
-    padding-left: 30px;
-    padding-top: 10px;
-  }
-  .site-navbar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 70px;
+  align-items: center;
+}
+.site-logo {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: $heading-font;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
 
-   
-  }
-  
-  .site-navbar ul li a {
-    color: #fff;
-    padding: 20px;
-    display: block;
-    text-decoration: none;
-    font-family: $body-font;
-    font-size: 20px;
-    transition: 0.3s ease;
-     
-  
-  }
-  .site-navbar ul li a:hover {
-    color: #000;
-  
-  }
-  .active{
-    border-bottom: 1px solid black;
-  }
+.site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  font-family: $body-font;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+.site-navbar ul li a:hover {
+  color: #000;
+}
+.active {
+  border-bottom: 1px solid black;
+}
 
 //   HAMBURGER MENU
 .nav-toggler {
-    border: none;
-    padding: 5px;
-    background-color: transparent;
-    cursor: pointer;
-    height: 39px;
-    display: none;
-  }
-  .nav-toggler span, 
-  .nav-toggler span:before, 
-  .nav-toggler span:after {
-    width: 28px;
-    height: 2px;
-    background-color: #fff;
-    display: block;
-    transition: .3s;
-  }
-  .nav-toggler span:before {
-    content: '';
-    transform: translateY(-9px);
-  }
-  .nav-toggler span:after {
-    content: '';
-    transform: translateY(6px);
-  }
-  .nav-toggler.toggler-open span {
-    background-color: transparent;
-  }
-  .nav-toggler.toggler-open span:before {
-    transform: translateY(0px) rotate(45deg);
-  }
-  .nav-toggler.toggler-open span:after {
-    transform: translateY(-3px) rotate(-45deg);
-  }
- 
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.nav-toggler span:before {
+  content: "";
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: "";
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
 
 /* mobile breakpoint start */
 @media screen and (max-width: 767px) {
-    .container {
-      max-width: 720px;
-    }
-    .nav-toggler{
-      display: block;
-    }
-    .site-logo{
-        padding: 0;
-        padding: 10px 0px 0px;
-    }
-    .site-navbar {
-      min-height: 60px;
-      padding: 0px 15px;
-    }
-    .site-navbar ul {
-      position: absolute;
-      width: 100%;
-      height: calc(100vh - 60px);
-      left: 0;
-      top: 60px;
-      flex-direction: column;
-      align-items: center;
-    background-color: $main-color;
-      max-height: 0;
-      overflow: hidden;
-      transition: .3s;
-    }
-    .site-navbar ul li {
-      width: 100%;
-      text-align: center;
-    }
-    .site-navbar ul li a {
-    padding: 50px;
-   
-    }
-    .site-navbar ul.open {
-      max-height: 100vh;
-      overflow: visible;
-    }
+  .container {
+    max-width: 720px;
   }
+  .nav-toggler {
+    display: block;
+  }
+  .site-logo {
+    padding: 0;
+    padding: 10px 0px 0px;
+  }
+  .site-navbar {
+    min-height: 60px;
+    padding: 0px 15px;
+  }
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    background-color: $main-color;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .site-navbar ul li a {
+    padding: 50px;
+  }
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+}
 
-//  =================== BASE STYLES  ================= 
+//  =================== BASE STYLES  =================
 
 body {
-    font-family: $body-font;
+  font-family: $body-font;
 }
-.sub-heading{
-    @include headings(3rem,center)
+.sub-heading {
+  @include headings(3rem, center);
 }
-
 
 //  =================== INTRODUCTION SECTION =================
-#home{
-    @include colors($pink-area:true);
-    padding: 85px 0 70px;
-    text-align: center;
-    margin-bottom: -5px;
+#home {
+  @include colors($pink-area: true);
+  padding: 85px 0 70px;
+  text-align: center;
+  margin-bottom: -5px;
 
-          
-   .heading{
-    @include headings(60px,center)
-   }
-   p{
-       font-size: 25px;
-       line-height: 2.0;
-       padding-bottom: 10px;
-   }
-   button{
-    @include button($pink-area:true);
-   }
-   button:hover{
-        background-color: #000;
-        a{
-            color: #fff;
-           }
+  .heading {
+    @include headings(60px, center);
+  }
+  p {
+    font-size: 25px;
+    line-height: 2;
+    padding-bottom: 10px;
+  }
+  button {
+    @include button($pink-area: true);
+  }
+  button:hover {
+    background-color: #000;
+    a {
+      color: #fff;
     }
+  }
 }
 
-.wave{
+.wave {
   width: 100%;
-
 }
 //  =================== ABOUT SECTION =================
 
 .about-me {
-    @include colors($pink-area:false);
-     
+  @include colors($pink-area: false);
 }
-.con{
+.con {
   padding: 50px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
 }
-.profile-image{
+.profile-image {
   width: 230px;
   margin-right: 60px;
- 
-  
 
-  img{
+  img {
     width: 100%;
     border-radius: 50%;
-  
   }
 }
-.about{
+.about {
   width: 600px;
-  padding: 40px 20px 0 ;
- 
-  
+  padding: 40px 20px 0;
 }
-.btn{
-          @include button($pink-area:false);
-          float: right;
-         }
-         .btn:hover{
-          background-color: $main-color;
-          a{
-              color: #fff;
-             }
-         
-      }
-
-
-
+.btn {
+  @include button($pink-area: false);
+  float: right;
+}
+.btn:hover {
+  background-color: $main-color;
+  a {
+    color: #fff;
+  }
+}
 
 //  =================== SKILLS SECTION =================
-  .skills-container{
-  @include colors($pink-area:false);
+.skills-container {
+  @include colors($pink-area: false);
   display: flex;
   justify-content: space-around;
   text-align: center;
   padding-top: 40px;
   padding: 40px 20px;
   flex-flow: row wrap;
-  
 }
 
-.skill{
+.skill {
   flex-basis: 20%;
   margin-bottom: 30px;
   margin-right: 15px;
-  
 }
-.skill i{
+.skill i {
   color: $main-color;
 }
 
-.wave-1{
+.wave-1 {
   transform: rotate(180deg);
 }
 //  =================== PORTFOLIO SECTION =================
-.portfolio{
-@include colors($pink-area:true);
-padding: 50px 0;
-margin: -10px 0px -5px;
+.portfolio {
+  @include colors($pink-area: true);
+  padding: 50px 0;
+  margin: -10px 0px -5px;
 
-.projects {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-top: 70px;
+  .projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
-.project {
-  text-align: left;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:center;
-  margin-bottom:60px;
-  
+    .project {
+      text-align: left;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+  }
 }
- 
-}
-
-
-}
-.project h2{
+.project h2 {
   font-family: $heading-font;
   font-size: 35px;
   line-height: 2.5;
   text-align: center;
 }
-.project h3{
+.project h3 {
   color: $main-color;
 }
-.project p{
+.project p {
   font-size: 20px;
 }
-.project ul  {
-list-style: circle;
-padding: 10px;
-font-size: 20px;
-
+.project ul {
+  list-style: circle;
+  padding: 10px;
+  font-size: 20px;
 }
-.content{
+.content {
   padding: 15px 30px;
   background-color: black;
-  
-  width: 40%;
+  // max-height: 30rem;
+  width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .content-btn {
   padding: 5px 10px;
   background-color: brown;
   border: none;
-  
-border-radius: 3px;
+
+  border-radius: 3px;
 }
 .content-btn a {
   color: whitesmoke;
   text-decoration: none;
 }
-.content-btn:hover{
+.content-btn:hover {
   background-color: #a13636;
 }
-.image{
-   width: 50%;
-   margin-right: 20px;
-  height: 60%;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-   border: 3px solid black;
+.image {
+  // width: 50%;
+  margin-right: 20px;
+  // height: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 3px solid black;
 }
-.image img{
-width: 100%;
-height: 100%;
+.image img {
+  width: 100%;
+  height: 100%;
 }
 //  =================== CONTACT SECTION =================
 .contact-me {
-  @include colors($pink-area:false);
-  padding:0;
+  @include colors($pink-area: false);
+  padding: 0;
 
-
-  p{
+  p {
     text-align: center;
-    
   }
-  .contact-me-text{
-margin: 10px 20px 0px ;
-font-size: 23px;
+  .contact-me-text {
+    margin: 10px 20px 0px;
+    font-size: 23px;
   }
 
-
-
-  .contacts{
+  .contacts {
     display: flex;
     flex-wrap: wrap-reverse;
     flex-direction: row;
     justify-content: space-around;
-    margin : 40px auto ;
-  
-   
-   
-  
+    margin: 40px auto;
+
     form {
       width: 50%;
 
-    display: inline-block;
-  
-   
+      display: inline-block;
 
-      button{
-    padding: 10px 50px;
-    background-color: black;
-    color: whitesmoke;
-    border: none;
-     float: right;
+      button {
+        padding: 10px 50px;
+        background-color: black;
+        color: whitesmoke;
+        border: none;
+        float: right;
       }
-     button:hover{
-       background-color: $main-color;
-       color: whitesmoke;
-       transition: 0.3s ease-in;
-      
-     }
+      button:hover {
+        background-color: $main-color;
+        color: whitesmoke;
+        transition: 0.3s ease-in;
+      }
 
-   
+      label {
+        margin: 10px 0;
+        width: 100%;
+      }
+      input {
+        padding: 5px 0;
+        width: 100%;
+      }
+      #message-box {
+        resize: vertical;
+        width: 100%;
+      }
+      #firstName,
+      #lastName,
+      #email,
+      #message-box {
+        border: 1px solid black;
+        padding: 5px;
+      }
 
-     label{
-       margin: 10px 0;
-       width: 100%;
-     }
-     input{
-       padding: 5px 0;
-       width: 100%;
-     }
-     #message-box {
-       resize: vertical;
-       width: 100%;
-
-     }
-#firstName,
-#lastName,
-#email,
-#message-box{
-  border: 1px solid black;
-  padding: 5px;
-}
-
-  #firstName:focus, #lastName:focus, #email:focus ,#message-box:focus{
-    outline: 3px solid $main-color;
-    border: none;
-  }
-   
+      #firstName:focus,
+      #lastName:focus,
+      #email:focus,
+      #message-box:focus {
+        outline: 3px solid $main-color;
+        border: none;
+      }
     }
-  
   }
-  .email,.phone{
-   padding: 25px 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  .email,
+  .phone {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
-.email img{
-  padding-right: 10px;
+  .email img {
+    padding-right: 10px;
+  }
 }
-}
-.social-media{
+.social-media {
   padding: 30px 0;
 }
 .social-media a {
@@ -482,168 +435,150 @@ font-size: 23px;
   transition: 0.5s ease-in;
 }
 
-#status{
+#status {
   text-align: center;
   max-width: 450px;
   width: 90%;
   padding: 10px;
   margin: 0 auto;
-
-  
 }
 
-#status.success{
+#status.success {
   background-color: #5aa897;
   color: whitesmoke;
-  animation: status 4s ease forwards ;
+  animation: status 4s ease forwards;
   padding-left: 20px;
-  
-
 }
 #status.error {
   background-color: #810000;
- color: whitesmoke;
-   animation: status 4s ease forwards;
+  color: whitesmoke;
+  animation: status 4s ease forwards;
 }
 
-@keyframes status{
-  0%{
+@keyframes status {
+  0% {
     opacity: 1;
     pointer-events: all;
   }
-  90%{
+  90% {
     opacity: 1;
     pointer-events: all;
   }
-  100%{
+  100% {
     opacity: 0;
     pointer-events: none;
   }
 }
 
 //  =================== FOOTER SECTION =================
-.last{
-  @include colors($pink-area:true);
+.last {
+  @include colors($pink-area: true);
   padding: 50px 0px;
   text-align: center;
   margin-top: -10px;
-  
 
-  .social-media a{
+  .social-media a {
     padding-left: 5px;
     color: #1f1f1f;
   }
-  .social-media a:hover{
+  .social-media a:hover {
     color: #fff;
     transition: 0.5s ease-in;
   }
 }
 
-
-
 //  =================== MEDIA QUERIES  =================
 @media screen and (max-width: 992px) {
-.project {
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 50px;
+  .project {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 50px;
+  }
 
+  .image {
+    width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .content {
+    width: 100%;
+  }
 }
 
-.image {
-  width: 100%;
-  margin-bottom: 20px;
-  height: auto;
-}
+@media screen and (max-width: 767px) {
+  .profile-image {
+    margin: 0;
+  }
 
-.content {
-  width: 100%;
-}
-}
+  .about {
+    padding: 40px 20px;
+  }
 
- @media screen and (max-width: 767px) {
-   .profile-image {
-     margin: 0;
-   }
+  .btn {
+    margin-top: 20px;
+    position: absolute;
+    left: 30%;
+    margin-bottom: 20px;
+  }
 
-   .about {
-     padding: 40px 20px;
-   }
-
-   .btn {
-     margin-top: 20px;
-     position: absolute;
-     left: 30%;
-     margin-bottom: 20px;
-
-   }
-
-   
-   
   #status {
     width: 70%;
-  
   }
-  .contact-information{
+  .contact-information {
     width: 100%;
     text-align: center;
   }
-.email, .phone {
-  justify-content: center;
-}
-
+  .email,
+  .phone {
+    justify-content: center;
+  }
 
   .contact-information .social-media {
     display: none;
   }
- }
-
-  @media screen and (max-width: 600px) {
-    #home p{
-    font-size:20px
-    }
-.project {
- 
-  margin: 0 20px;
 }
 
-.project h2 {
-  font-family: $heading-font;
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.project h3 {
-  color: $main-color;
-  font-size: 15px;
-}
-
-.project p {
-  font-size: 15px;
-}
-
-.project ul {
-  list-style: circle;
-  padding: 5px;
-  font-size: 10px;
-
-}
- .contact-me .contacts form {
-   width: 100%;
-   margin: 0 30px;
-
-
-button{
-  float: none;
- width: 100%;
-}
-
-
- }
-
- .contact-me .email{
-padding: 30px 0 5px;
- }
- 
+@media screen and (max-width: 600px) {
+  #home p {
+    font-size: 20px;
   }
+  .project {
+    margin: 0 20px;
+  }
+
+  .project h2 {
+    font-family: $heading-font;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .project h3 {
+    color: $main-color;
+    font-size: 15px;
+  }
+
+  .project p {
+    font-size: 15px;
+  }
+
+  .project ul {
+    list-style: circle;
+    padding: 5px;
+    font-size: 10px;
+  }
+  .contact-me .contacts form {
+    width: 100%;
+    margin: 0 30px;
+
+    button {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .contact-me .email {
+    padding: 30px 0 5px;
+  }
+}
