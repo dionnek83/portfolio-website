@@ -1,8 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
@@ -13,20 +12,14 @@
 }
 
 .navbar-area {
-  background: #c01246;
+  background: rgb(192, 18, 70);
 }
 
 .site-navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 10px 70px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .site-logo {
@@ -43,8 +36,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -55,7 +46,6 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -83,20 +73,17 @@
   height: 2px;
   background-color: #fff;
   display: block;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .nav-toggler span:before {
-  content: '';
-  -webkit-transform: translateY(-9px);
-          transform: translateY(-9px);
+  content: "";
+  transform: translateY(-9px);
 }
 
 .nav-toggler span:after {
-  content: '';
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
+  content: "";
+  transform: translateY(6px);
 }
 
 .nav-toggler.toggler-open span {
@@ -104,13 +91,11 @@
 }
 
 .nav-toggler.toggler-open span:before {
-  -webkit-transform: translateY(0px) rotate(45deg);
-          transform: translateY(0px) rotate(45deg);
+  transform: translateY(0px) rotate(45deg);
 }
 
 .nav-toggler.toggler-open span:after {
-  -webkit-transform: translateY(-3px) rotate(-45deg);
-          transform: translateY(-3px) rotate(-45deg);
+  transform: translateY(-3px) rotate(-45deg);
 }
 
 /* mobile breakpoint start */
@@ -135,18 +120,12 @@
     height: calc(100vh - 60px);
     left: 0;
     top: 60px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #c01246;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(192, 18, 70);
     max-height: 0;
     overflow: hidden;
-    -webkit-transition: .3s;
-    transition: .3s;
+    transition: 0.3s;
   }
   .site-navbar ul li {
     width: 100%;
@@ -160,7 +139,6 @@
     overflow: visible;
   }
 }
-
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -172,25 +150,22 @@ body {
 }
 
 #home {
-  background-color: #c01246;
-  color: #f5ebeb;
+  background-color: rgb(192, 18, 70);
+  color: rgb(245, 235, 235);
   padding: 85px 0 70px;
   text-align: center;
   margin-bottom: -5px;
 }
-
 #home .heading {
   text-align: center;
   font-size: 60px;
   font-family: "Luckiest Guy", cursive;
 }
-
 #home p {
   font-size: 25px;
-  line-height: 2.0;
+  line-height: 2;
   padding-bottom: 10px;
 }
-
 #home button {
   padding: 10px 25px;
   border-radius: 10px;
@@ -199,16 +174,13 @@ body {
   text-decoration: none;
   background-color: #fff;
 }
-
 #home button a {
   text-decoration: none;
   color: #1f1f1f;
 }
-
 #home button:hover {
   background-color: #000;
 }
-
 #home button:hover a {
   color: #fff;
 }
@@ -224,21 +196,15 @@ body {
 
 .con {
   padding: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .profile-image {
   width: 230px;
   margin-right: 60px;
 }
-
 .profile-image img {
   width: 100%;
   border-radius: 50%;
@@ -258,16 +224,14 @@ body {
   background-color: #1f1f1f;
   float: right;
 }
-
 .btn a {
   color: #fff;
   text-decoration: none;
 }
 
 .btn:hover {
-  background-color: #c01246;
+  background-color: rgb(192, 18, 70);
 }
-
 .btn:hover a {
   color: #fff;
 }
@@ -275,98 +239,93 @@ body {
 .skills-container {
   background-color: #fff;
   color: #1f1f1f;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   text-align: center;
   padding-top: 40px;
   padding: 40px 20px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .skill {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  flex-basis: 20%;
   margin-bottom: 30px;
   margin-right: 15px;
 }
 
 .skill i {
-  color: #c01246;
+  color: rgb(192, 18, 70);
 }
 
 .wave-1 {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .portfolio {
-  background-color: #c01246;
-  color: #f5ebeb;
+  background-color: rgb(192, 18, 70);
+  color: rgb(245, 235, 235);
   padding: 50px 0;
   margin: -10px 0px -5px;
 }
-
 .portfolio .projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-top: 70px;
+  justify-content: space-around;
+  padding: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-
 .portfolio .projects .project {
   text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-bottom: 60px;
+  align-items: center;
 }
 
 .project h2 {
   font-family: "Luckiest Guy", cursive;
   font-size: 35px;
-  line-height: 2.5;
+  line-height: 2;
   text-align: center;
 }
 
+.project h2,
+h3 {
+  color: #000;
+}
+
 .project h3 {
-  color: #c01246;
+  text-decoration: underline;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .project p {
   font-size: 20px;
+  color: black;
+  font-weight: bold;
 }
 
 .project ul {
   list-style: circle;
   padding: 10px;
   font-size: 20px;
+  color: black;
+  font-weight: bold;
 }
 
 .content {
   padding: 15px 30px;
-  background-color: black;
+  background-color: whitesmoke;
   width: 40%;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .content-btn {
-  padding: 5px 10px;
+  padding: 10px 15px;
   background-color: brown;
   border: none;
   border-radius: 3px;
@@ -382,17 +341,28 @@ body {
 }
 
 .image {
-  width: 50%;
-  margin-right: 20px;
-  height: 60%;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border: 3px solid black;
+  margin-right: 30px;
+  text-align: center;
 }
 
 .image img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+}
+
+.content-btn a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.content-btn:hover {
+  background-color: #a13636;
+}
+
+.notice {
+  text-align: center;
+  padding: 1rem;
 }
 
 .contact-me {
@@ -400,36 +370,24 @@ body {
   color: #1f1f1f;
   padding: 0;
 }
-
 .contact-me p {
   text-align: center;
 }
-
 .contact-me .contact-me-text {
   margin: 10px 20px 0px;
   font-size: 23px;
 }
-
 .contact-me .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content: space-around;
   margin: 40px auto;
 }
-
 .contact-me .contacts form {
   width: 50%;
   display: inline-block;
 }
-
 .contact-me .contacts form button {
   padding: 10px 50px;
   background-color: black;
@@ -437,29 +395,23 @@ body {
   border: none;
   float: right;
 }
-
 .contact-me .contacts form button:hover {
-  background-color: #c01246;
+  background-color: rgb(192, 18, 70);
   color: whitesmoke;
-  -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
-
 .contact-me .contacts form label {
   margin: 10px 0;
   width: 100%;
 }
-
 .contact-me .contacts form input {
   padding: 5px 0;
   width: 100%;
 }
-
 .contact-me .contacts form #message-box {
   resize: vertical;
   width: 100%;
 }
-
 .contact-me .contacts form #firstName,
 .contact-me .contacts form #lastName,
 .contact-me .contacts form #email,
@@ -467,26 +419,20 @@ body {
   border: 1px solid black;
   padding: 5px;
 }
-
-.contact-me .contacts form #firstName:focus, .contact-me .contacts form #lastName:focus, .contact-me .contacts form #email:focus, .contact-me .contacts form #message-box:focus {
-  outline: 3px solid #c01246;
+.contact-me .contacts form #firstName:focus,
+.contact-me .contacts form #lastName:focus,
+.contact-me .contacts form #email:focus,
+.contact-me .contacts form #message-box:focus {
+  outline: 3px solid rgb(192, 18, 70);
   border: none;
 }
-
-.contact-me .email, .contact-me .phone {
+.contact-me .email,
+.contact-me .phone {
   padding: 25px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
-
 .contact-me .email img {
   padding-right: 10px;
 }
@@ -501,8 +447,7 @@ body {
 }
 
 .social-media a:hover {
-  color: #c01246;
-  -webkit-transition: 0.5s ease-in;
+  color: rgb(192, 18, 70);
   transition: 0.5s ease-in;
 }
 
@@ -517,31 +462,14 @@ body {
 #status.success {
   background-color: #5aa897;
   color: whitesmoke;
-  -webkit-animation: status 4s ease forwards;
-          animation: status 4s ease forwards;
+  animation: status 4s ease forwards;
   padding-left: 20px;
 }
 
 #status.error {
   background-color: #810000;
   color: whitesmoke;
-  -webkit-animation: status 4s ease forwards;
-          animation: status 4s ease forwards;
-}
-
-@-webkit-keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
+  animation: status 4s ease forwards;
 }
 
 @keyframes status {
@@ -558,35 +486,26 @@ body {
     pointer-events: none;
   }
 }
-
 .last {
-  background-color: #c01246;
-  color: #f5ebeb;
+  background-color: rgb(192, 18, 70);
+  color: rgb(245, 235, 235);
   padding: 50px 0px;
   text-align: center;
   margin-top: -10px;
 }
-
 .last .social-media a {
   padding-left: 5px;
   color: #1f1f1f;
 }
-
 .last .social-media a:hover {
   color: #fff;
-  -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
 }
 
 @media screen and (max-width: 992px) {
   .project {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 50px;
   }
   .image {
@@ -598,7 +517,6 @@ body {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 767px) {
   .profile-image {
     margin: 0;
@@ -619,16 +537,14 @@ body {
     width: 100%;
     text-align: center;
   }
-  .email, .phone {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .email,
+.phone {
+    justify-content: center;
   }
   .contact-information .social-media {
     display: none;
   }
 }
-
 @media screen and (max-width: 600px) {
   #home p {
     font-size: 20px;
@@ -643,7 +559,6 @@ body {
     text-align: center;
   }
   .project h3 {
-    color: #c01246;
     font-size: 15px;
   }
   .project p {
@@ -666,4 +581,5 @@ body {
     padding: 30px 0 5px;
   }
 }
+
 /*# sourceMappingURL=main.css.map */
