@@ -227,12 +227,16 @@ body {
   flex-wrap: wrap;
 }
 .profile-image {
-  width: 230px;
   margin-right: 60px;
+  background-image: url(/images/profile-picture.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
 
   img {
     width: 100%;
-    border-radius: 50%;
   }
 }
 .about {
