@@ -3,293 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="./dist/css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"> 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  </head>
-<body>    
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kreon&family=Marko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<body>
+
+<!-- NAVIGATION -------------------------------------------------------------------------------------->
+    <div class="container">
+<nav>
+    <ul class="nav-links">
+    <li><a href="#">home</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#portfolio">portfolio</a></li>
+    <li><a href="#contact">contact</a></li>
+</ul>
+    <!-- <button>dark/light</button> -->
+
+       <!-- nav-toggler for mobile version only -->
+       <button class="nav-toggler">
+        <span></span>
+      </button>
+</nav>
+<div class="container">
+
+  <!-- HERO  -------------------------------------------------------------------------------------- -->
+
+    <section class="hero">
+<p class="text-one"> Developer & Horror movie fanatic</p>
+<p class="text-two"><span>Hi I'm Dionne Kauandenge</span>, a software developer based in Namibia.</p>
+<button class="btn view"><a href="#portfolio">view projects</a></button>
+
+<div class="social-links">
+    <button><a href="https://github.com/dionnek83" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a> </button>
+    <button> <a href="https://www.linkedin.com/in/dionne-kauandenge-a8a2aa168" target="_blank"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></button>
+    <button><a href="https://www.youtube.com/channel/UCu6xOPzztjACUdQQet4OGVQ"  target="_blank"> <i class="fa-brands fa-youtube fa-xl" ></i></a></button>
+</div>
+
+
+    </section>
+
+  <!-- ABOUT ---------------------------------------------------------------------------------------------------------------------->
+
+  <section class="about" id="about">
     
-    <div class="navbar-area">
-        <div class="container">
-            <nav class="site-navbar">
-              <!-- site logo -->
-              <a href="#home" class="site-logo">Dionne</a>
-             
-              <!-- site menu/nav -->
-              <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-      
-              <!-- nav-toggler for mobile version only -->
-              <button class="nav-toggler">
-                <span></span>
-              </button>
-           
-            </nav>
+    <div class="info">
+        <div class="profile-image">
+   
         </div>
+        <h1 >About Me</h1>
+        <p>Hi my name is Dionne Kauandenge and I'm a passionate and highly motivated computer science graduate with a strong desire to 
+            collaborate with a dynamic team of developers. With internship experience under my belt, I'm ready to contribute my skills 
+            and knowledge to add value to an amazing company.</p>
+  
+        <div class="shape-container">
+           </div>
     </div>
 
-        <main>
-        <section id="home">
-            <div class="intro">
-          <h1 class="heading">Welcome</h1>
-          <p>
-            I'm a Software developer 
-            based in Namibia.
-          </p>
-          <button class="projects-btn"><a href="#portfolio">View Projects</a></button>
-        </div>
-        </section>
-        <img class="wave" src="./images/Vector.svg" alt="">
-    
-<section id="about" class="about-me">
-  <h1 class="sub-heading">About Me</h1>
-  <div class="con">
-  <div class="profile-image">
-   
-  </div>
-  <div class="about">
-    <p> Hi my name is Dionne Kauandenge and I'm a computer science graduate.
-      My first real world experience with software development (internship) really motivated and inspired me to work harder and to always keep learning.
-      My dream is to work with a team again and build amazings projects together.  
-     I'm currently focusing on improving my skills in the languages that I know by  
-     building projects that I can use in my daily life which is the best way to learn to code in my opinion &#128522;.
- </p>
-    <div class="my-skills">
+  
 
-        <div class="skills-container">
-      <div class="skill">
-        <i class="fab fa-html5 fa-2x"></i>
-        <h3>HTML</h3>
-      </div>
-      <div class="skill">
-        <i class="fab fa-css3-alt fa-2x"></i>
-        <h3>CSS</h3>
-      </div>
-      <div class="skill">
-       <i class="fab fa-sass fa-2x"></i>
-        <h3>SCSS</h3>
-      </div>
-      <div class="skill">
-       <i class="fab fa-js-square fa-2x"></i>
-        <h3>JavaScript</h3>
-      </div>
-      <div class="skill">
-        <i class="fab fa-react fa-2x"></i>
-          <h3>React</h3>
-        </div>
-        <div class="skill">
-          <i class="fab fa-bootstrap fa-2x"></i>
-            <h3>Bootstrap</h3>
-          </div>
-          <div class="skill">
-            <i class="fab fa-php fa-2x"></i>
-              <h3>PHP</h3>
+    <div class="technologies">
+        <ul>
+            <div>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
             </div>
-      <div class="skill">
-      <i class="fas fa-database fa-2x"></i>
-        <h3>SQL</h3>
-      </div>
+            <div>
+                <li>SCSS</li>
+                <li>Bootstrap</li>
+                <li>React</li>
+            </div>
+   
+            <div>
+                <li>Typescript</li>
+                <li>PHP</li>
+                <li>SQL</li>
+            </div>
+          
+        </ul>
+        <button><a href="./Dionne_Kauandenge_CV.pdf" target="_blank" >Download CV </a> </button>
+    </div>
+  </section>
+
+   <!-- PROJECTS --------------------------------------------------------------------------------------------->
+
+   <section class="projects" id="portfolio">
+
+    <h1>Projects</h1>
+    <div class="projects-container">
+
+        <!-- RECIPE APP CONTAINER ----------------------------->
 
      
+        <div class="project">
+            <div class="dots"><i class="fa-solid fa-ellipsis fa-2xl"></i></div>
+            <h3>Recipe Book</h3>
+            <p>This is a mobile flutter app designed for saving and managing recipes. Firebase was used for storing user recipes and implementing user authentication.</p>
+       <div class="tech">
+        <button> Flutter</button>
+        <button>Firebase</button>
+       </div>
+       <div class="project-links">
+        <button><a href="https://github.com/dionnek83/Flutter-Recipe-app" target="_blank" > <span><i class="fa-brands fa-github-alt fa-2xl"></i>   Code</a></span></button>
+        <button><a href="#" target="_blank" ><span><i class="fa-solid fa-download fa-xl"></i> App</span></a></button>
+       </div>
+        </div>
 
-      
+         <!-- E-COMMERCE WEBSITE CONTAINER --------------------------->
+
+        <div class="project">
+            <div class="dots"><i class="fa-solid fa-ellipsis fa-2xl"></i></div>
+            <h3>Simply Beauty</h3>
+            <p>This is a Fully responsive multi-page Ecommerce Website which interacts with the API that I created using PHP & SQL.</p>
+       <div class="tech">
+        <button>React</button>
+        <button>TailwindCSS</button>
+        <button>PHP</button>
+        <button>SQL</button>
+       </div>
+       <div class="project-links">
+        <button><a href="https://github.com/dionnek83/simply-beauty" target="_blank"><span><i class="fa-brands fa-github-alt fa-2xl"></i>   Code</span></a></button>
+        <button><a href="https://incandescent-boba-f0ac14.netlify.app/#/" target="_blank" ><span><i class="fa-solid fa-arrow-up-right-from-square fa-xl"></i> Live website</span></a></button>
+       </div>
+        </div>
+
+         <!-- PORTFOLIO WEBSITE CONTAINER --------------------------->
+
+         <div class="project">
+            <div class="dots"><i class="fa-solid fa-ellipsis fa-2xl"></i></div>
+            <h3>Portfolio Website</h3>
+            <p>This website serves as a showcase of my skills and projects. 
+                The entire design was brought to life through Figma, resulting in an adorable 
+                and user-friendly website that reflects my personality and style.</p>
+       <div class="tech">
+        <button>HTML</button>
+        <button>CSS</button>
+        <button>JavaScript</button>
+       </div>
+       <div class="project-links">
+        <button><a href="https://github.com/dionnek83/portfolio-website" target="_blank" ><span><i class="fa-brands fa-github-alt fa-2xl"></i>   Code</span></a></button>
+        <button><a href="https://sharp-davinci-6aa9bd.netlify.app/" ><span><i class="fa-solid fa-arrow-up-right-from-square fa-xl"></i> Live website</span></a></button>
+       </div>
+        </div>
+
+
     </div>
-  
-      <button class="btn"><a href="/Dionne_Kauandenge - CV.pdf" target="_blank">Download CV </a></button>
+
+   </section>
+
+  <!-- CONTACT ---------------------------------------------------------------------------------------------------------------->
+
+<section class="contact" id="contact">
+
+    <div class="left-side">
        
-  </div>
+        <h1>Get in touch</h1>
+        <hr>
+        <form id="my-form" action="https://formspree.io/f/xvodgdyz" method="POST" >
+        <input type="text" name="name" id="name" placeholder="Full name" required>
+        <input type="email" name="email" id="email" placeholder="Email Address" required>
+     <textarea name="message" id="message" cols="30" rows="10" placeholder="Message..." required></textarea>
+    <button>Submit</button>
+</form>
+    </div>
+<div class="right-side">
+<div class="block">1</div>
+<div id="status" ></div>  
+
+    <div class="contact-info">
+        <h3>Info</h3>
+        <span><i class="fa-regular fa-envelope fa-xl"></i>  dionnek83@gmail.com</span>
+        <span><i class="fa-solid fa-phone fa-xl"></i>   +(264) 814659446</span>
+    </div>
 </div>
 </section>
 
-
-
-        <img class="wave-1" src="./images/wave1.svg" alt="wave 1">
-        </section>
-        
-        <section id="portfolio" class="portfolio">
-         
-          <h1 class="sub-heading">Projects</h1>
-          <div class="projects">
-          
-            <div class="project">
-              <div class="image ">
-  <img src="./images/Untitled design(3).gif" alt="website-gif">
-
-  
-   
-              </div>
-            
-              <div class="content">
-             <h2>Simply Beauty </h2>
-              <p>This is a Fully responsive multi-page Ecommerce Website which interacts with the API that I created using PHP & SQL.
-              </p>
-<br>
-<br>
-              <p>Disclaimer : The live website does not have all the Functionality specified on the Github repo due 
-                to hosting restrictions since I'm hosting this project for free. 
-              </p>
-              <br>
-              
-              <h3> Structure of the Website  </h3>
-              <ul>
-                <li>React and TailwindCSS was used to create the frontend </li>
-                <li>PHP was used to interact with the Database</li>
-                <li>Sql was used to store all the products</li>
-                <li>The frontend is deployed on Netlify and the API is hosted on 000Webhost </li>
-
-
-              </ul>
-            
-             
-             <h3> Website Functionality </h3> 
-              <ul>
-                <li>Displays all the products in the Sql database</li>
-                <li>Add and delete items in the cart</li>
-                <li>Update the quanity for each item in the cart</li>
-                <li>Ability to search for products in the store</li>
-
-              </ul>
-  
-          
-  
-              
-              
-              <button class="content-btn"><a href="https://github.com/dionnek83/simply-beauty" target="_blank">View Code</a></button>
-              <button class="content-btn"><a href="https://incandescent-boba-f0ac14.netlify.app" target="_blank">View Live Website</a></button>
-          
-  
-              </div>
-              
-           
-            </div>
-
-            <div class="project">
-              <div class="image">
-   <img src="./images/recipe.gif" alt="website-gif"> 
-              </div> 
-            
-               <div class="content">
-             <h2>Recipe App</h2>
-              <p>This is a flutter app used to save recipes</p>
-              <br>
-              
-              <h3> Structure of the App  </h3>
-              <ul>
-                <li>Flutter(dart) was used to create the user interface </li>
-                <li>Firebase was used to store user recipes and authenticate each user</li>
-               
-
-              </ul> 
-            
-            
-             <h3> App Functionality </h3> 
-              <ul>
-                <li>User Authetication via Google and email & password</li>
-                <li>Create recipes</li>
-                <li>Add recipes to the favourites list</li>
-                <li>Delete recipes</li>
-                <li>Display each recipe from firebase </li>
-                <li>Search for a specific recipe</li>
-
-              </ul> 
-  
-          
-  
-              
-              
-              <button class="content-btn"><a href="https://github.com/dionnek83/Flutter-Recipe-app" target="_blank">View Code</a></button>
-              <!-- <button class="content-btn"><a href="#" target="_blank">View Live Website</a></button> -->
-            
-  
-              </div>
-              </div>
-
-              <div class="project">
-                <div class="image">
-     <img src="./images/tracker.gif" alt="website-gif"> 
-                </div> 
-              
-                 <div class="content">
-               <h2>Tv Show Tracker & Movie Watchlist </h2>
-               <p class="notice">&#128522; Currently under construction(coming soon) &#128522;</p>
-                
-</div>
-
-           
-                </div>
-       
-    
-
-
-          </div>
-        </section>
-        <img class="wave" src="./images/Vector.svg" alt="">
-        <section id="contact" class="contact-me">
-             <div id="status" ></div>  
-
-          <h2 class="sub-heading">Contact Me</h2>
-          <p class="contact-me-text"> If you want to reach me you can contact me through the following.</p>
-          <div class="contacts">
-            <div class="contact-information">
-    
-          <div class="email"> 
-            <img src="./images/email.svg" alt="" width="50" />
-            <h4>dionnek83@gmail.com</h4>
-          </div>
-          <div class="phone">
-            <img src="./images/smartphone.svg" alt="" width="50" />
-            <h4>(+264) 814659446</h4>
-          </div>
-            <div class="social-media">
-     <a href="https://github.com/dionnek83" target="_blank"> <i class="fab fa-github fa-2x "></i></a>
-     <a href=""> <i class="fab fa-instagram fa-2x "></i></a>
-     <a href=""> <i class="fab fa-linkedin fa-2x"></i></a>
-     <a href=""> <i class="fab fa-twitter fa-2x"></i></a>
-          </div>
-          </div>
-     
-<form id="my-form" action="https://formspree.io/f/xvodgdyz" method="POST" >
-  <label for="">First Name : </label>
-  <input type="text" id="firstName" name="firstName" required>
-   <label for="">Last Name : </label>
-  <input type="text" id="lastName" name="lastName" required>
-  <label for="">Email Address : </label>
-  <input type="text" id="email" name="email" required>
-  <label for="">Comments/Questions :</label>
-  <textarea name="message-box" id="message-box" cols="30" rows="10">
-
-  </textarea>
-  <button>Send Message</button>
-</form >
-
-        </div>
-
-        </section>
-           <img class="wave-1" src="./images/wave1.svg" alt="">
-        <footer class="last">
-          <div class="social-media">
-     <a href="https://github.com/dionnek83" target="_blank"> <i class="fab fa-github fa-2x "></i></a>
-     <a href=""> <i class="fab fa-instagram fa-2x "></i></a>
-     <a href=""> <i class="fab fa-linkedin fa-2x"></i></a>
-     <a href=""> <i class="fab fa-twitter fa-2x"></i></a>
-          </div>
-          <p>&copy; Copyright 2022 </p>
-          </footer>
-        </main>
-        <script src="./js/main.js"></script>
-       
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="https://kit.fontawesome.com/f630eed439.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      
-      </body>
-    
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     
+ <!-- FOOTER ------------------------------------------------------------------------------------------------------------>
+<footer>
+    <div class="footer-social-links">
+        <button><a href="https://github.com/dionnek83" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a> </button>
+        <button> <a href="https://www.linkedin.com/in/dionne-kauandenge-a8a2aa168" target="_blank"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></button>
+        <button><a href="https://www.youtube.com/channel/UCu6xOPzztjACUdQQet4OGVQ"  target="_blank"> <i class="fa-brands fa-youtube fa-xl" ></i></a></button>
+    </div>
+    <p>@ copyright 2023</p>
+</footer>
+<script src="/main.js"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </body>
 </html>
