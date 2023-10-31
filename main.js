@@ -23,6 +23,21 @@ function navLinkClick() {
   }
 }
 
+// VIDEO FUNCTIONALITY  -----------------------------------------------------------------
+
+function open_popup(container){
+  var simply_con= document.getElementById(container);
+  simply_con.classList.add("active");
+}
+
+function close_popup(container){
+  var simply_con= document.getElementById(container);
+  simply_con.classList.remove("active");
+ var video = document.querySelector("." + container + " video");
+  video.pause();
+  video.currentTime = 0;
+}
+
 // FORM FUNCTIONALITY -----------------------------------------------------------------
 
 var form = document.getElementById("my-form");

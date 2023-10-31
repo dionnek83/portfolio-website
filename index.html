@@ -104,15 +104,23 @@
         <div class="project">
             <div class="dots"><i class="fa-solid fa-ellipsis fa-2xl"></i></div>
             <h3>Recipe Book</h3>
-            <p>This is a mobile flutter app designed for saving and managing recipes. Firebase was used for storing user recipes and implementing user authentication.</p>
+            <p>This is a mobile flutter app designed for saving and managing recipes. Users can create, view, update, delete recipes as well as add them to the favourites list.</p>
        <div class="tech">
         <button> Flutter</button>
         <button>Firebase</button>
        </div>
        <div class="project-links">
         <button><a href="https://github.com/dionnek83/Flutter-Recipe-app" target="_blank" > <span><i class="fa-brands fa-github-alt fa-2xl"></i>   Code</a></span></button>
-        <button><a href="#" target="_blank" ><span><i class="fa-solid fa-download fa-xl"></i> App</span></a></button>
-       </div>
+        <button><a href="./recipe-book.apk" ><span><i class="fa-solid fa-download fa-xl"></i> App</span></a></button>
+        <button onclick="open_popup('video-container')"  ><span><i class="fa-solid fa-video fa-xl"></i> Video demo</span></button>
+    
+    </div>
+        </div>
+
+        <div class="video-container" id="video-container">
+            <video src="./Recipe-book-video-demo.mp4" controls="true"></video>
+          <button onclick="close_popup('video-container')"  class="close-btn" ><i class="fa-solid fa-xmark fa-2xl"></i></button>
+        
         </div>
 
          <!-- E-COMMERCE WEBSITE CONTAINER --------------------------->
@@ -120,17 +128,24 @@
         <div class="project">
             <div class="dots"><i class="fa-solid fa-ellipsis fa-2xl"></i></div>
             <h3>Simply Beauty</h3>
-            <p>This is a Fully responsive multi-page Ecommerce Website which interacts with the API that I created using PHP & SQL.</p>
+            <p>This is a Hair company website. Users can view all the products in the database, add and delete products in the cart and modify the product's quantity in the cart.</p>
        <div class="tech">
         <button>React</button>
-        <button>TailwindCSS</button>
+        <button>Tailwind</button>
         <button>PHP</button>
         <button>SQL</button>
        </div>
        <div class="project-links">
         <button><a href="https://github.com/dionnek83/simply-beauty" target="_blank"><span><i class="fa-brands fa-github-alt fa-2xl"></i>   Code</span></a></button>
-        <button><a href="https://incandescent-boba-f0ac14.netlify.app/#/" target="_blank" ><span><i class="fa-solid fa-arrow-up-right-from-square fa-xl"></i> Live website</span></a></button>
-       </div>
+        <button><a href="https://incandescent-boba-f0ac14.netlify.app/#/" target="_blank" ><span><i class="fa-solid fa-arrow-up-right-from-square fa-xl"></i> Live</span></a></button>
+        <button onclick="open_popup('simply-video-container')"><span><i class="fa-solid fa-video fa-xl"></i> Video demo</span></button>
+    </div>
+        </div>
+
+        <div class="simply-video-container" id="simply-video-container">
+            <video  src="./Simply-Beauty-video-demo.mp4" controls="true"></video>
+          <button onclick="close_popup('simply-video-container')" class="close-btn" ><i class="fa-solid fa-xmark fa-2xl"></i></button>
+        
         </div>
 
          <!-- PORTFOLIO WEBSITE CONTAINER --------------------------->
